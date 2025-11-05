@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "route": "/api/blogposts",
+      "methods": [ "POST", "PUT", "DELETE" ],
+      "allowedRoles": [ "admin" ]
+    },
+    {
+      "route": "/auth.json",
+      "allowedRoles": [ "admin" ]
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": [
+      "/images/*.{png,jpg,gif}",
+      "/css/*",
+      "/api/*"
+    ]
+  }
+}
